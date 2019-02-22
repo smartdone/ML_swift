@@ -155,7 +155,7 @@ print("Evaluation Error: \(evaluationError)")
 let testFile = Bundle.main.url(forResource: "test", withExtension: "csv")!
 var testData = try MLDataTable(contentsOf: testFile)
 
-print(testData)
+//print(testData)
 for key in drop{
     testData.removeColumn(named: key)
 }
@@ -186,7 +186,7 @@ testData.removeColumn(named: "Id")
 var predict = try model.predictions(from: testData)
 let sampleFile = Bundle.main.url(forResource: "sample_submission", withExtension: "csv")!
 let sampleData = try MLDataTable(contentsOf: sampleFile)
-print(sampleData)
+//print(sampleData)
 let fileManager = FileManager.default
 let fileName = "/result.csv"
 let file = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first

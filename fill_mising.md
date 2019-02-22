@@ -1,4 +1,4 @@
-# MLDataTable处理缺失值
+# Create ML处理缺失值
 
 在pandas里面有很丰富的api来处理数据，但是对于需要使用苹果Create ML来训练模型，并运用到ios或者macOS设备上面的用户来说，就没有这么多丰富的api来使用。机器学习样本理想的情况下倒是不需要做太多处理，但是实际样本很有可能会有很多缺失值，这个时候如果不对缺失值做处理，就根本无法进行模型的训练。
 
@@ -187,11 +187,11 @@ Mode : 60
 
 ## 完整的例子
 
-对训练数据缺失值进行填充，如果是数值就填充均值进去，如果是字符串就填充众数进去，丢弃掉缺失值70%以上的数据。整体代码如下
+要完成房价预测，需要下面几个步骤：
 
-```swift
+1. **对训练数据缺失值进行填充**，如果是数值就填充均值进去，如果是字符串就填充众数进去，丢弃掉缺失值70%以上的数据。整体代码如下
+2. **选择合适的模型训练**，我这里使用的是线性回归
+3. **使用训练好的模型来预测**
 
-```
-
-
+完整代码参考：[https://github.com/smartdone/ML_swift/blob/master/House_price_forecast.playground/Contents.swift](https://github.com/smartdone/ML_swift/blob/master/House_price_forecast.playground/Contents.swift)
 
